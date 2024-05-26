@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <title>知乎登录</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="CSS/reset.css">
+  <style>
+    body {
+      background-color: #B8E5F8;
+      background-image: url("./0.png");
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+ 
+    #logo>img {
+      width: 128px;
+      height: 81px;
+    }
+ 
+    #logo {
+      text-align: center;
+      margin-top: 115px;
+      margin-bottom: 24px;
+    }
+ 
+    #content {
+      width: 800px;
+      height: 550px;
+      background-color: white;
+      margin: auto;
+      padding: 0px 24px;
+      border-radius: 4px 4px 0px 0px;
+      position: relative;
+    }
+ 
+    #content_left {
+      float: left;
+      width: 370px;
+    }
+ 
+	
+ 
+    #content_left_top1 {
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 90px;
+      margin-bottom: 10px;
+    }
+ 
+    #content_left_top2 {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+ 
+    #content_left_middle {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+ 
+    #content_left_buttom {
+      font-weight: bold;
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+ 
+    #content_left_floor {
+      background-color: unset;
+      font-weight: inherit;
+      margin-right: 8px;
+      padding: 4px 10px;
+      border-radius: 29px;
+      font-size: 12px;
+      color: #373a40;
+      line-height: 19px;
+      display: inline-block;
+ 
+    }
+ 
+    #content_left_floor_one {
+      box-sizing: border-box;
+      margin: 50px, 20px;
+      min-width: 0;
+      border: 1px solid #EBEBEB;
+      border-radius: 50px;
+ 
+    }
+ 
+ 
+    #content_right {
+      float: right;
+    }
+ 
+    #content_login_select {
+      font-size: 16px;
+      margin-top: 30px;
+    }
+ 
+    #content_login_select>span {
+      height: 18px;
+      padding: 0px 24px;
+      display: inline-block;
+    }
+ 
+    #content_login_select>span:first-child {
+      margin-right: 20px;
+    }
+ 
+    .chick {
+      padding: 20px 0px 18px 0px !important;
+      font-weight: 700;
+      /*border-bottom: #0084FF solid;*/
+    }
+ 
+    .chick:hover {
+      border-bottom: #0084FF solid;
+    }
+ 
+    #ewm {
+      position: absolute;
+      width: 52px;
+      top: 0px;
+      right: 0px;
+      border-radius: 0px 4px 0px 0px;
+    }
+ 
+    #img_div {
+      position: absolute;
+      border: 26px #fff solid;
+      border-top: 26px rgba(0, 0, 0, 0) solid;
+      border-right: 26px rgba(0, 0, 0, 0) solid;
+      top: 0px;
+      right: 0px;
+      border-radius: 0px 2px 0px 0px;
+    }
+ 
+    #content_login_form input:not([type=submit]) {
+      width: 100%;
+      height: 42px;
+      border: none;
+      border-bottom: 1px rgba(0, 0, 0, .1) solid;
+      outline: none;
+      margin: 7px 0px;
+      font-size: 14px;
+    }
+ 
+    #content_login_form {
+      position: relative;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+ 
+    #content_login_form>form>div {
+      padding: 5px 0px;
+    }
+ 
+    #content_login_form>form>div>a {
+      font-size: 0.9em;
+      color: #175199;
+    }
+ 
+    #content_login_form>form>div>a:last-of-type {
+      float: right;
+      color: #8792a8;
+    }
+ 
+    #content a:hover {
+      color: #677288 !important;
+ 
+    }
+ 
+ 
+ 
+    #content_login_form input[type=submit] {
+      width: 100%;
+      height: 36px;
+      border: none;
+      background-color: #0084FF;
+      color: white;
+      margin-top: 30px;
+      font-size: 14px;
+      border-radius: 3px;
+    }
+ 
+    #content_login_form input[type=submit]:hover {
+      background-color: #0074dd;
+    }
+ 
+    #content_login_form img {
+      position: absolute;
+      right: 0px;
+      top: 100px;
+    }
+ 
+    #content_login_other {
+      height: 5px;
+      border-radius: 0px 0px 4px 4px;
+      margin: auto;
+      font-size: 13px;
+      padding: 17px 21px;
+      color: #8792a8;
+      text-align: center;
+    }
+ 
+    #content_login_bottom {
+      height: 26px;
+      border-radius: 0px 0px 4px 4px;
+      margin: auto;
+      font-size: 13px;
+      padding: 17px 21px;
+      color: #8792a8;
+    }
+ 
+    #content_login_bottom>div:first-of-type {
+      float: left;
+    }
+ 
+    #content_login_bottom>div:last-of-type {
+      padding: 6px 0px;
+      float: right;
+    }
+ 
+    #content_login_bottom>div:last-of-type>a {
+      color: #8792a8;
+    }
+ 
+    #content_login_bottom a {
+      color: #8792A8;
+    }
+ 
+    #content_login_bottom>div:last-of-type>a:hover {
+      color: #1751a5;
+    }
+ 
+    #social_contact_login {
+      width: 350px;
+      height: 16px;
+      border-radius: 3px;
+      background-color: #fff;
+      padding: 22px 24px;
+      margin: auto;
+      margin-top: 0px;
+      color: #8A95AA;
+      text-decoration: none;
+    }
+ 
+    #social_contact_login a {
+      display: inline-block;
+      margin: 0px 6px;
+      color: #8A95AA;
+    }
+ 
+    #social_contact_login>div {
+      float: right;
+    }
+ 
+    #social_contact_login>span {
+      float: left;
+    }
+ 
+    #content_bottom {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 13px;
+      color: #fff;
+    }
+ 
+    #content_bottom a:hover {
+      text-decoration: underline;
+    }
+ 
+    #content_bottom img {
+      width: 16px;
+    }
+ 
+    #content_bottom a {
+      color: #fff;
+    }
+ 
+    #content_bottom>div {
+      margin: 8px;
+    }
+ 
+    #content_bottom>div>*:after {
+      content: ' · '
+    }
+ 
+    #content_bottom>div>*:last-child:after {
+      content: ' ';
+    }
+  </style>
+ 
+</head>
+ 
+<body>
+  <div id="logo">
+    <img src="https://pic2.zhimg.com/80/v2-f6b1f64a098b891b4ea1e3104b5b71f6_720w.png" alt="">
+  </div>
+  <div id="content">
+    <div id="content_left">
+      <div id="content_left_top">
+        <div id="content_left_top1">打开知乎App</div>
+        <div id="content_left_top2">在「我的页」右上角打开扫一扫</div>
+      </div>
+      <div id="content_left_middle">
+        <img src="public/屏幕截图 2024-05-12 185530.png" alt="">
+      </div>
+      <div id="content_left_buttom">
+        其他扫码方式：微信
+      </div>
+      <div id="content_left_floor">
+        <span id="content_left_floor_one"><a href="https://www.zhihu.com/app/" target="_blank"
+            style="text-decoration: none; color: black;">下载知乎App</a></span>
+        <span><a href="https://www.zhihu.com/org/signup" target="_blank"
+            style="text-decoration: none; color: black;">开通机构号</a></span>
+        <span><a href="https://www.zhihu.com/signin?next=%2F" target="_blank"
+            style="text-decoration: none; color: black;">无障碍模式</a></span>
+      </div>
+    </div>
+    <div id="content_right">
+      <div id="content_login_select">
+        <span class="chick">免密码登录</span>
+        <span class="chick">密码登录</span>
+      </div>
+      <img src="	https://picx.zhimg.com/v2-9e41ea16bdfbe9cf4896617ecad5b4ca.png" alt="" id="ewm">
+      <div id="img_div"></div>
+      <div id="content_login_form">
+        <form action="#" method="post">
+          <input type="text" name="userName" placeholder="手机号或邮箱">
+          <input type="password" name="password" placeholder="密码"><br>
+          <img src="./图片.png" alt="">
+          <div>
+            <a href="#">海外手机号</a>
+            <a href="#">忘记密码？</a><br>
+          </div>
+          <input type="submit" value="注册/登录">
+        </form>
+      </div>
+      <div id="content_login_other">—————————— 其他方式登录 ——————————</div>
+      <div id="social_contact_login">
+ 
+        <div>
+          <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx268fcfe924dcb171&redirect_uri=https%3A%2F%2Fwww.zhihu.com%2Foauth%2Fcallback%2Fwechat%3Faction%3Dlogin%26from%3D&response_type=code&scope=snsapi_login#wechat"
+            target="_blank">
+            <img src="image/wx.png" alt="">
+            <span>微信</span>
+          </a>
+          <a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&client_id=100490701&redirect_uri=https%3A%2F%2Fwww.zhihu.com%2Foauth%2Fcallback%2Fqqconn%3Faction%3Dlogin%26from%3D&response_type=code&scope=get_info%2Cget_user_info%2Cget_other_info%2Cadd_t%2Cadd_pic_t%2Cget_fanslist%2Cget_idollist%2Cadd_idol%2Cadd_share"
+            target="_blank">
+            <img src="image/qq.png" alt="">
+            <span>QQ</span>
+          </a>
+          <a href="https://api.weibo.com/oauth2/authorize?client_id=3063806388&redirect_uri=http%3A%2F%2Fwww.zhihu.com%2Foauth%2Fcallback%2Fsina&response_type=code&scope=email###"
+            target="_blank">
+            <img src="image/vb.png" alt="">
+            <span>微博</span>
+          </a>
+        </div>
+      </div>
+      <div id="content_login_bottom">
+        <div>
+          未注册手机未注册手机验证后自动登录<br>
+          注册即代表同意
+          <a href="#">《知乎协议》</a>
+          <a href="#">《隐私保护指引》</a>
+        </div>
+        <div>
+          <a href="#">注册机构号</a>
+        </div>
+      </div>
+    </div>
+ 
+ 
+  </div>
+ 
+  <div id="content_bottom">
+    <div>
+      <a href="#">知乎专栏</a>
+      <a href="#">圆桌</a>
+      <a href="#">发现</a>
+      <a href="#">联系我们</a>
+      <a href="#">来知乎工作</a>
+      <a href="#">注册机构号</a>
+    </div>
+    <div>
+      <span> 2019 知乎</span>
+      <a href="#">京 ICP 证 110745 号</a>
+      <img src="1.png" alt="">
+      <a href="#">京公网安备 11010802010035 号</a>
+      <a href="#">出版物经营许可证</a>
+    </div>
+    <div>
+      <a href="#">侵权举报</a>
+      <a href="#">网上有害信息举报专区</a>
+      <a href="#">儿童色情信息举报专区</a>
+      <span>违法和不良信息举报：010-82716601</span>
+    </div>
+  </div>
+</body>
+ 
+</html>
